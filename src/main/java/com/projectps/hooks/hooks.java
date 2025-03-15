@@ -1,21 +1,30 @@
-package com.cucumber.test;
+package com.projectps.hooks;
 
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.Test;
 
-public class test1 {
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+
+public class hooks {
 	
-	@Test
-	public void testCase1() {
-		
-		WebDriver driver = new ChromeDriver();
+	WebDriver driver;
+	
+	@Before
+	public void launch() {
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get("https://tutorialsninja.com/demo/index.php?route=account/login");
-		driver.quit();
 
 	}
+	
+	
+	@After
+	public void tearDown() {
+		driver.quit();
+	}
+
 }
