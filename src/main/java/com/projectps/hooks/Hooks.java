@@ -8,11 +8,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
-public class hooks {
+public class Hooks {
 	
-	WebDriver driver;
+	public static WebDriver driver;
 	
 	@Before
+	
 	public void launch() {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();

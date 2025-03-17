@@ -6,7 +6,7 @@
       <class name="com.PROJECTPS.testrunner.RunnerClass">
         <methods>
           <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="0 1"/>
+          <include name="runScenario" invocation-numbers="0"/>
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- com.PROJECTPS.testrunner.RunnerClass -->
